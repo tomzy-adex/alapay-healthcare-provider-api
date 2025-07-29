@@ -4,7 +4,7 @@ import Redis from 'ioredis';
 require('dotenv').config();
 
 export const config = {
-  port: process.env.APP_PORT,
+  port: process.env.PORT || process.env.APP_PORT || 3000,
   baseUrl: process.env.BASE_URL,
   frontendUrl: process.env.FRONTEND_URL,
   healthProviderUrl: process.env.HEALTH_PROVIDER_URL,
